@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #c29418;
+  --color-gold-light: #d4a82a;
+  --color-bg: #080808;
+  --color-surface: #111111;
+  --color-border: #262626;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #080808;
+  color: #e7e5e4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #c29418; }
+
+.gold-underline { position: relative; display: inline-block; }
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 40px; height: 2px;
+  background: #c29418;
+}
+
+.maestra-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(194,148,24,0.15);
+  border: 1px solid rgba(194,148,24,0.4);
+  color: #d4a82a;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.palenque-card { transition: border-color 0.2s ease, transform 0.2s ease; }
+.palenque-card:hover { border-color: rgba(194,148,24,0.3); transform: translateY(-1px); }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+*:focus-visible { outline: 2px solid #c29418; outline-offset: 2px; }
+::selection { background: rgba(194,148,24,0.3); color: #fff; }
