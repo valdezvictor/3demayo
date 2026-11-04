@@ -1,0 +1,19 @@
+import { NextResponse } from "next/server"
+import { Pool } from "pg"
+
+const pool = new Pool({
+  host: "cv-prod-db.cyfiieky5gzb.us-west-1.rds.amazonaws.com",
+  user: "cvadmin", password: "cv2026Vivo", database: "cafevivo_prod",
+  port: 5432, ssl: { rejectUnauthorized: false },
+})
+
+export async function GET() {
+  try {
+    const result = await pool.query(
+      "SELECT * FROM subscribers ORDER BY created_at DESC LIMIT 500"
+    )
+    return NextResponse.json(result.rows)
+  } catch (e: any) {
+    return NextResponse.json([])
+  }
+}
