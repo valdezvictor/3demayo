@@ -12,7 +12,7 @@ export default function SiteFooter() {
 
         {/* Brand */}
         <div className="md:col-span-1">
-          <p className="text-white font-bold text-lg tracking-tight mb-2">Tres de Mayo</p>
+          <p className="text-white font-bold text-lg tracking-tight mb-2">3 de Mayo</p>
           <p className="text-stone-500 text-xs leading-relaxed max-w-[200px]">
             {t(
               'Conocimiento mezcalero. Documentado, verificado, bilingüe.',
@@ -58,7 +58,7 @@ export default function SiteFooter() {
       {/* Bottom bar */}
       <div className="border-t border-stone-900 px-6 py-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-stone-700">
-          <p>© {new Date().getFullYear()} Tres de Mayo. {t('Todos los derechos reservados.','All rights reserved.')}</p>
+          <p>© {new Date().getFullYear()} 3 de Mayo. {t('Todos los derechos reservados.','All rights reserved.')}</p>
           <p>{t('Bebe con moderación. Solo mayores de 18 años.','Drink responsibly. 18+ only.')}</p>
         </div>
       </div>

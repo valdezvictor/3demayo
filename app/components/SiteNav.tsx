@@ -30,7 +30,7 @@ export function SiteNav() {
         {/* Logo / wordmark */}
         <Link href={lang === 'en' ? '/en' : '/'} className="flex items-center gap-3 group">
           <span className="font-serif text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-            Tres de Mayo
+            3 de Mayo
           </span>
           <span className="hidden sm:block text-stone-600 text-xs font-mono tracking-widest uppercase">
             Mezcal

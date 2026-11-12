@@ -7,9 +7,9 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#080808] pt-20">
       <section className="px-6 py-20 max-w-4xl mx-auto">
         <p className="text-amber-400 text-sm tracking-[0.2em] uppercase mb-3">{t('Nuestra Historia','Our Story')}</p>
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">Tres de Mayo</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">3 de Mayo</h1>
         <p className="text-stone-300 text-xl leading-relaxed mb-6">{t('El 3 de mayo es la fiesta de la Santa Cruz — el día en que los maestros de obra celebran su oficio. Es también el día en que en muchas comunidades mezcaleras de México, el agave regresa a la tierra.','May 3rd is the feast of the Holy Cross — the day craftsmen celebrate their trade. It is also the day when, in many mezcal communities across Mexico, the agave returns to the earth.')}</p>
-        <p className="text-stone-400 text-lg leading-relaxed mb-6">{t('Tres de Mayo nació de esa misma convicción: que el mezcal no es una bebida de moda, sino un oficio ancestral que merece ser documentado, entendido y compartido con respeto.','Tres de Mayo was born from that same conviction: that mezcal is not a trend, but an ancestral craft that deserves to be documented, understood, and shared with respect.')}</p>
+        <p className="text-stone-400 text-lg leading-relaxed mb-6">{t('3 de Mayo nació de esa misma convicción: que el mezcal no es una bebida de moda, sino un oficio ancestral que merece ser documentado, entendido y compartido con respeto.','3 de Mayo was born from that same conviction: that mezcal is not a trend, but an ancestral craft that deserves to be documented, understood, and shared with respect.')}</p>
         <p className="text-stone-400 text-lg leading-relaxed">{t('Somos una plataforma de conocimiento mezcalero. No vendemos botellas. Conectamos personas con productores, regiones con mesas, y tradición con curiosidad.','We are a mezcal knowledge platform. We do not sell bottles. We connect people with producers, regions with tables, and tradition with curiosity.')}</p>
       </section>
       <section className="border-t border-stone-800 px-6 py-20">

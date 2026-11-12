@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "DMS del Marqués — Palenque Artesanal | Tres de Mayo",
+  title: "DMS del Marqués — Palenque Artesanal | 3 de Mayo",
   description: "Palenque fundado en 1987 en San Marcos Tlapazola, Oaxaca. Maestra Mezcalera Graciela Cruz Hernández. Agaves Espadín, Tobalá y Tepeztate a 1,680 metros de altitud.",
   keywords: ["DMS del Marqués", "mezcal artesanal", "San Marcos Tlapazola", "Graciela Cruz Hernández", "maestra mezcalera", "Tobalá", "Tepeztate", "palenque Oaxaca"],
   openGraph: {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Palenque artesanal en los Valles Centrales de Oaxaca. Producción tradicional con agaves propios desde 1987.",
     type: "website",
     locale: "es_MX",
-    siteName: "Tres de Mayo",
+    siteName: "3 de Mayo",
     url: "https://www.3demayo.com/palenques/dmsdelmarques",
   },
   alternates: {

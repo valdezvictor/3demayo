@@ -34,7 +34,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* Eyebrow */}
           <p className="text-xs tracking-[0.25em] uppercase text-amber-400/80 mb-6 font-mono">
-            Tres de Mayo · Mezcal Artesanal
+            3 de Mayo · Mezcal Artesanal
           </p>
 
           {/* Headline */}
@@ -161,7 +161,7 @@ export default function HomePage() {
       {/* ── Footer ── */}
       <footer className="border-t border-stone-900 py-10 px-6 text-center">
         <p className="font-serif text-amber-400/60 text-sm tracking-widest uppercase">
-          Tres de Mayo
+          3 de Mayo
         </p>
         <p className="text-stone-700 text-xs mt-2 font-mono">
           Mezcal Artesanal · Hecho en México · NOM-070

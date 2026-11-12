@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.svg',
   },
   title: {
-    default: 'Tres de Mayo — Mezcal Artesanal',
-    template: '%s | Tres de Mayo',
+    default: '3 de Mayo — Mezcal Artesanal',
+    template: '%s | 3 de Mayo',
   },
   description:
     'Mezcal artesanal de las 12 regiones certificadas de México. Palenques, maestras, variedades de agave y cultura mezcalera.',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_MX',
     alternateLocale: 'en_US',
-    siteName: 'Tres de Mayo',
+    siteName: '3 de Mayo',
   },
 }
 

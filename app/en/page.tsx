@@ -29,7 +29,7 @@ export default function HomePageEN() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <p className="text-xs tracking-[0.25em] uppercase text-amber-400/80 mb-6 font-mono">
-            Tres de Mayo · Artisanal Mezcal
+            3 de Mayo · Artisanal Mezcal
           </p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
             From the Agave
@@ -148,7 +148,7 @@ export default function HomePageEN() {
       {/* ── Footer ── */}
       <footer className="border-t border-stone-900 py-10 px-6 text-center">
         <p className="font-serif text-amber-400/60 text-sm tracking-widest uppercase">
-          Tres de Mayo
+          3 de Mayo
         </p>
         <p className="text-stone-700 text-xs mt-2 font-mono">
           Artisanal Mezcal · Made in Mexico · NOM-070
