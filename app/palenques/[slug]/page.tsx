@@ -41,7 +41,7 @@ async function getPalenque(slug: string): Promise<PalenqueRecord | null> {
 
     if (!res.ok) return null;
     const data = await res.json();
-    return data.palenque ?? null;
+    return data ?? null;
   } catch {
     return null;
   }

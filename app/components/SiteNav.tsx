@@ -10,6 +10,7 @@ export function SiteNav() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [silvestreOpen, setSilvestreOpen] = useState(false)
+  const closeTimer = typeof window !== 'undefined' ? { current: null as ReturnType<typeof setTimeout> | null } : { current: null }
 
   const navLinks = [
     { href: lang === 'en' ? '/en/regiones' : '/regiones',    label: t('Regiones', 'Regions') },
@@ -49,7 +50,7 @@ export function SiteNav() {
         <div className="hidden md:flex items-center gap-6">
 
           {/* Silvestre dropdown */}
-          <div className="relative" onMouseEnter={() => setSilvestreOpen(true)} onMouseLeave={() => setSilvestreOpen(false)}>
+          <div className="relative" onMouseEnter={() => { if (closeTimer.current) clearTimeout(closeTimer.current); setSilvestreOpen(true) }} onMouseLeave={() => { closeTimer.current = setTimeout(() => setSilvestreOpen(false), 300) }}>
             <button
               className={`text-sm transition-colors flex items-center gap-1 ${
                 isSilvestreActive ? 'text-amber-400 font-medium' : 'text-stone-400 hover:text-stone-200'
