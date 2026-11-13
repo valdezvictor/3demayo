@@ -284,7 +284,7 @@ export default function GuardianesPage() {
               <div className="g-profile-header">
                 <div className="g-monogram">J</div>
                 <div>
-                  <div className="g-profile-name">Maestro Jaime</div>
+                  <a href="/palenques/palenque-el-original" className="g-profile-name" style={{color:"inherit",textDecoration:"none",borderBottom:"1px solid var(--amber)",paddingBottom:"1px"}}>Maestro Jaime</a>
                   <div className="g-profile-brand">Palenque El Original</div>
                   <div className="g-profile-theme">Artesanía Ancestral &amp; Custodia de la Biósfera</div>
                 </div>
@@ -337,7 +337,7 @@ export default function GuardianesPage() {
               <div className="g-profile-header">
                 <div className="g-monogram" style={{ background: 'var(--amber-dim)', borderColor: 'var(--amber)', color: 'var(--amber-light)' }}>JA</div>
                 <div>
-                  <div className="g-profile-name">Jorge Armando Rojas González</div>
+                  <a href="/palenques/mezcal-santo-chinga-dazo" className="g-profile-name" style={{color:"inherit",textDecoration:"none",borderBottom:"1px solid var(--amber)",paddingBottom:"1px"}}>Jorge Armando Rojas González</a>
                   <div className="g-profile-brand">Mezcal Santo Chin-ga Dazo</div>
                   <div className="g-profile-theme">Propiedad Ejidal, Resiliencia Comunitaria &amp; Defensa Genética</div>
                 </div>

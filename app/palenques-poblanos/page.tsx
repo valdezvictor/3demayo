@@ -367,7 +367,7 @@ export default function PalenquesPoblanosPage() {
                   <tbody>
                     <tr>
                       <td><span style={{ fontFamily: 'var(--mono)', color: 'var(--fg-dim)', fontSize: '.75rem' }}>P-01</span></td>
-                      <td><span className="pp-cell-name">Palenque El Original</span><span className="pp-cell-sub">Maestro Jaime</span></td>
+                      <td><a href="/palenques/palenque-el-original" className="pp-cell-name" style={{color:"inherit",textDecoration:"none",borderBottom:"1px solid var(--amber)",paddingBottom:"1px"}}>Palenque El Original</a><span className="pp-cell-sub">Maestro Jaime</span></td>
                       <td>Tehuacán / Zapotitlán</td>
                       <td><span className="pp-badge ancestral">Ancestral</span></td>
                       <td><span className="pp-badge silvestre">Silvestre</span></td>
@@ -376,7 +376,7 @@ export default function PalenquesPoblanosPage() {
                     </tr>
                     <tr>
                       <td><span style={{ fontFamily: 'var(--mono)', color: 'var(--fg-dim)', fontSize: '.75rem' }}>P-02</span></td>
-                      <td><span className="pp-cell-name">Santo Chin-ga Dazo</span><span className="pp-cell-sub">Jorge Armando Rojas González</span></td>
+                      <td><a href="/palenques/mezcal-santo-chinga-dazo" className="pp-cell-name" style={{color:"inherit",textDecoration:"none",borderBottom:"1px solid var(--amber)",paddingBottom:"1px"}}>Santo Chin-ga Dazo</a><span className="pp-cell-sub">Jorge Armando Rojas González</span></td>
                       <td>San Vicente Ferrer, Tehuacán</td>
                       <td><span className="pp-badge artisanal">Artesanal</span></td>
                       <td><span className="pp-badge silvestre">Silvestre</span></td>
@@ -470,7 +470,7 @@ export default function PalenquesPoblanosPage() {
                 ].map(p => (
                   <div className="pp-card" key={p.code}>
                     <div className="pp-card-code">{p.code}</div>
-                    <div className="pp-card-name">{p.name}</div>
+                    <a href={`/palenques/${p.code === 'P-01' ? 'palenque-el-original' : p.code === 'P-02' ? 'mezcal-santo-chinga-dazo' : '#'}`} className="pp-card-name" style={{color:'inherit',textDecoration:'none',borderBottom:'1px solid var(--amber)',paddingBottom:'1px'}}>{p.name}</a>
                     <div className="pp-card-brand">{p.brand}</div>
                     <div className="pp-card-meta">
                       <div className="pp-meta-item"><div className="pp-meta-label">Municipio</div><div className="pp-meta-val">{p.muni}</div></div>

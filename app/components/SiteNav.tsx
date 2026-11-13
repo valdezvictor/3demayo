@@ -9,6 +9,7 @@ export function SiteNav() {
   const { lang, toggle, t } = useLang()
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [silvestreOpen, setSilvestreOpen] = useState(false)
 
   const navLinks = [
     { href: lang === 'en' ? '/en/regiones' : '/regiones',    label: t('Regiones', 'Regions') },
@@ -21,7 +22,14 @@ export function SiteNav() {
     { href: '/agaves',     label: t('Agaves', 'Agaves') },
   ]
 
+  const silvestreLinks = [
+    { href: '/silvestre',           label: t('El Índice Silvestre', 'Silvestre Index') },
+    { href: '/guardianes',          label: t('Guardianes del Maguey', 'Guardians of Maguey') },
+    { href: '/palenques-poblanos',  label: t('Palenques Poblanos', 'Puebla Palenques') },
+  ]
+
   const isActive = (href: string) => pathname === href || pathname?.startsWith(href + '/')
+  const isSilvestreActive = silvestreLinks.some(l => isActive(l.href))
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/90 backdrop-blur-sm border-b border-stone-900">
@@ -39,6 +47,41 @@ export function SiteNav() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
+
+          {/* Silvestre dropdown */}
+          <div className="relative" onMouseEnter={() => setSilvestreOpen(true)} onMouseLeave={() => setSilvestreOpen(false)}>
+            <button
+              className={`text-sm transition-colors flex items-center gap-1 ${
+                isSilvestreActive ? 'text-amber-400 font-medium' : 'text-stone-400 hover:text-stone-200'
+              }`}
+              onClick={() => setSilvestreOpen(!silvestreOpen)}
+            >
+              {t('Silvestre', 'Silvestre')}
+              <svg className={`w-3 h-3 transition-transform ${silvestreOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {silvestreOpen && (
+              <div className="absolute top-full left-0 mt-1 w-56 bg-[#0e0d0b] border border-stone-800 rounded shadow-xl py-1 z-50">
+                {silvestreLinks.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setSilvestreOpen(false)}
+                    className={`block px-4 py-2.5 text-sm transition-colors ${
+                      isActive(href)
+                        ? 'text-amber-400 font-medium bg-stone-900/50'
+                        : 'text-stone-400 hover:text-stone-200 hover:bg-stone-900/30'
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Regular links */}
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
@@ -56,7 +99,6 @@ export function SiteNav() {
 
         {/* Right side: lang toggle + mobile menu */}
         <div className="flex items-center gap-4">
-          {/* ES | EN toggle */}
           <button
             onClick={toggle}
             aria-label={lang === 'es' ? 'Switch to English' : 'Cambiar a Español'}
@@ -71,7 +113,6 @@ export function SiteNav() {
             </span>
           </button>
 
-          {/* Mobile hamburger */}
           <button
             className="md:hidden text-stone-400 hover:text-stone-200 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -90,16 +131,38 @@ export function SiteNav() {
         </div>
       </div>
 
-      {/* Mobile menu dropdown */}
+      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-stone-900 bg-[#080808]">
-          <div className="px-6 py-4 flex flex-col gap-4">
+          <div className="px-6 py-4 flex flex-col gap-1">
+
+            {/* Silvestre section in mobile */}
+            <div className="pb-2 mb-2 border-b border-stone-900">
+              <p className="text-xs font-mono tracking-widest uppercase text-stone-700 mb-2">
+                {t('Silvestre', 'Silvestre')}
+              </p>
+              {silvestreLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`block text-sm py-1.5 pl-3 transition-colors ${
+                    isActive(href)
+                      ? 'text-amber-400 font-medium'
+                      : 'text-stone-400 hover:text-stone-200'
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm py-1 transition-colors ${
+                className={`text-sm py-1.5 transition-colors ${
                   isActive(href)
                     ? 'text-amber-400 font-medium'
                     : 'text-stone-400 hover:text-stone-200'
