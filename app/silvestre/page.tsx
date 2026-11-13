@@ -33,7 +33,7 @@ export default function SilvestrePage() {
           color: var(--fg);
           font-family: var(--body);
           min-height: 100vh;
-          padding: 0 max(16px, env(safe-area-inset-left, 0px));
+          padding: 80px max(16px, env(safe-area-inset-left, 0px)) 0;
         }
 
         /* Nav */
@@ -208,17 +208,6 @@ export default function SilvestrePage() {
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500&display=swap" />
 
       <div className="silvestre-wrap">
-        {/* Nav */}
-        <nav>
-          <div className="s-topbar">
-            <a className="s-brand" href="/">3demayo.com</a>
-            <div className="s-breadcrumb">
-              <span>Inicio</span> › <span>Regiones</span> ›
-              <strong style={{ color: 'var(--fg-muted)' }}>Maguey Silvestre</strong>
-            </div>
-          </div>
-        </nav>
-
         {/* Hero */}
         <header>
           <div className="s-hero">
